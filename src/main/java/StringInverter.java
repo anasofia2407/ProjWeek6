@@ -7,4 +7,10 @@ public class StringInverter implements StringTransformer{
         }
         drink.setText(aux);
     }
+
+    @Override
+    public void undo(StringDrink drink) {
+        execute(drink);
+
+    }
 }

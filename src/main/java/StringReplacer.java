@@ -11,4 +11,11 @@ public class StringReplacer implements StringTransformer {
         aux= drink.getText().replace(cpt,cpm);
         drink.setText(aux);
     }
+
+    @Override
+    public void undo(StringDrink drink) {
+        String aux="";
+        aux= drink.getText().replace(cpm,cpt);
+        drink.setText(aux);
+    }
 }
