@@ -2,14 +2,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class stringDrinkTest {
+public class stringInverterTest {
     @Test
-    public void stringDrink() {
+    public void stringInverter() {
         StringDrink drink = new StringDrink("ABCD");
-        assertEquals("ABCD", drink.getText());
-        drink.setText("DCBA");
+        StringInverter si = new StringInverter();
+        si.execute(drink);
         assertEquals("DCBA", drink.getText());
     }
-
-
 }
