@@ -11,7 +11,7 @@ public class SmartStrategy implements OrderingStrategy{
 
     @Override
     public void happyHourStarted(Bar bar) {
-        recipe.mix(this.drink);
+        wants(drink,recipe,(StringBar)bar);
 
     }
 
