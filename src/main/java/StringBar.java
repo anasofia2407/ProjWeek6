@@ -2,20 +2,19 @@ import java.util.List;
 
 public class StringBar extends Bar{
 
-    private Boolean hh;
 
     public void StringBar() {
-        this.hh=false;
+        super.setHh(false);
     }
-
-
     public boolean isHappyHour() {
-        return hh;
+        return super.getHh();
     }
     public void startHappyHour() {
-        hh=true;
-    };
+        super.setHh(true);
+        notifyObservers();};
     public void endHappyHour() {
-        hh=false;
+        super.setHh(false);
+        notifyObservers();
     };
+    public void order(StringDrink drink, StringRecipe recipe){recipe.mix(drink);}
 }
